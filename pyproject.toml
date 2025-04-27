@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "secret-message-decoder"
+version = "0.1.0"
+description = "A decoder for secret messages in Google Docs"
+authors = ["Christian Haddrell <jodre11.public@gamil.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+pytest = "^8.0.0"
+syrupy = "^4.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+syrupy = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
