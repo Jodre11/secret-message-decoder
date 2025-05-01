@@ -15,7 +15,28 @@ syrupy = "^4.0.0"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 syrupy = "^4.0.0"
+flake8 = "^6.1.0"
+flake8-docstrings = "^1.7.0"
+flake8-import-order = "^0.18.2"
+black = "^24.2.0"
 
 [build-system]
 requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api" 
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = ".git,__pycache__,build,dist"
+per-file-ignores = [
+    "__init__.py:F401",
+    "test_*.py:D100,D101,D102,D103,D107"
+]
+docstring-convention = "google"
+import-order-style = "google"
+inline-quotes = "double"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$' 
